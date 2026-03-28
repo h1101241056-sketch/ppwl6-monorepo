@@ -113,8 +113,6 @@ const app = new Elysia()
       });
 
       if (!session) return;
-
-      // ✅ SET COOKIE (FIX PRODUCTION)
       session.value = sessionId;
       session.maxAge = 60 * 60 * 24; // 1 hari
       session.path = "/";
